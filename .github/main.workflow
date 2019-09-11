@@ -1,12 +1,12 @@
 workflow "Hello world workflow" {
-    on = "push"
-    resolves = ["Echo"]
+  resolves = ["Echo"]
+  on = "push"
 }
 
 action "Echo" {
-    uses = "./custom-action"
-    env = {
-        NAME = "xlui"
-    }
-    args = "\"Hello world, I'm $NAME!\""
+  uses = "./custom-action"
+  args = "\"Hello world, I'm $NAME!\""
+  env = {
+    NAME = "Dong Qiu"
+  }
 }
